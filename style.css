@@ -1,0 +1,218 @@
+:root{
+            --bg:#f5f7fb; --card:#ffffff; --accent:#2b7a78; --muted:#6b7280;
+            --glass: rgba(255,255,255,0.65);
+            font-family: Inter, Roboto, "Segoe UI", system-ui, -apple-system, sans-serif;
+        }
+
+        *{box-sizing:border-box}
+        body{
+            margin:0;
+            background-color:#0b1220; /* fondo oscuro */
+            background-image:
+            radial-gradient(700px 350px at 10% 15%, rgba(184,139,47,0.06), transparent 18%),
+            radial-gradient(500px 250px at 85% 80%, rgba(255,214,115,0.04), transparent 14%),
+            linear-gradient(180deg, rgba(255,215,130,0.02), rgba(0,0,0,0.25)); /* toques dorados sutiles */
+            background-attachment:fixed;
+            color:#d9b831; /* texto claro sobre fondo oscuro */
+            -webkit-font-smoothing:antialiased;
+            line-height:1.45;
+            padding:24px;
+        }
+
+        .container{
+            max-width:980px;
+            margin:0 auto;
+            display:flex;
+            flex-direction:column;
+            gap:18px;
+        }
+
+        header{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:12px;
+        }
+.grid-nav {
+    /* 1. Enable CSS Grid for the navigation container */
+    display: grid; 
+
+    /* 2. Define the columns: one for each link, sized automatically (auto) */
+    /* Alternatively, you could use 'repeat(3, 1fr)' for equal width columns. */
+    grid-template-columns: auto auto auto; 
+
+    /* 3. Space out the items or align the entire grid within the available space */
+    /* This centers the links horizontally within the nav bar */
+    justify-content: center; 
+
+    /* Optional: Styling for visual clarity */
+    background-color: #333; /* Dark background */
+    padding: 10px; /* Internal spacing */
+    border-radius: 5px;
+}
+
+/* Optional: Styling for the links */
+.grid-nav a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* White text */
+    padding: 5px 15px; /* Spacing around text */
+    transition: background-color 0.3s;
+}
+
+.grid-nav a:hover {
+    background-color: #555; /* Slightly lighter on hover */
+    border-radius: 3px;
+}
+        .title{
+            display:flex;
+            gap:12px;
+            align-items:center;
+        }
+
+        .logo{
+            width:64px;
+            height:64px;
+            border-radius:12px;
+            background:linear-gradient(135deg,var(--accent),#115e59);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:white;
+            font-weight:700;
+            box-shadow:0 6px 18px rgba(43,122,120,0.18);
+        }
+
+        h1{font-size:20px;margin:0}
+        p.lead{margin:0;color:var(--muted);font-size:14px}
+
+        .hero{
+            background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.45));
+            padding:18px;
+            border-radius:12px;
+            display:flex;
+            gap:18px;
+            align-items:center;
+            box-shadow:0 6px 22px rgba(16,24,40,0.05);
+        }
+
+        .hero .info{flex:1}
+        .meta{
+            display:flex;
+            gap:12px;
+            margin-top:10px;
+            flex-wrap:wrap;
+        }
+        .pill{
+            background:var(--card);
+            border-radius:999px;
+            padding:8px 12px;
+            font-size:13px;
+            color:var(--muted);
+            box-shadow:0 4px 12px rgba(16,24,40,0.04);
+        }
+
+        main{display:grid;grid-template-columns:1fr 320px;gap:18px}
+        @media (max-width:880px){ main{grid-template-columns:1fr} }
+
+        section.card{
+            background:var(--card);
+            padding:16px;
+            border-radius:12px;
+            box-shadow:0 6px 22px rgba(16,24,40,0.04);
+        }
+
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            gap:12px;
+        }
+        @media (max-width:560px){ .grid{grid-template-columns:1fr} }
+
+        .curiosity{
+            padding:12px;
+            background:linear-gradient(180deg,var(--glass), rgba(255,255,255,0.8));
+            border-radius:10px;
+            min-height:100px;
+        }
+        .curiosity h3{margin:0 0 8px 0;font-size:15px}
+        .curiosity p{margin:0;color:var(--muted);font-size:14px}
+
+        aside .map{
+            height:220px;
+            border-radius:10px;
+            background:linear-gradient(135deg,#e6f3f2,#fff);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:var(--accent);
+            font-weight:600;
+            box-shadow:inset 0 1px 0 rgba(255,255,255,0.6);
+        }
+
+        .gallery{
+            display:flex;
+            gap:8px;
+            margin-top:12px;
+            flex-wrap:wrap;
+        }
+        .thumb{
+            flex:1 1 calc(33.333% - 8px);
+            min-width:80px;
+            height:72px;
+            border-radius:8px;
+            background:linear-gradient(135deg,#f8fafc,#eef6f5);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:var(--muted);
+            font-size:12px;
+        }
+        @media (max-width:560px){ .thumb{flex-basis:48%} }
+
+        footer{display:flex;justify-content:space-between;align-items:center;padding-top:6px;color:var(--muted);font-size:13px}
+        .small{font-size:12px;color:var(--muted)}
+
+header {
+    background-color: #1a2232; /* Fondo oscuro */
+    color: #fff;              /* Texto claro */
+    padding: 20px;
+    border: 1px solid #000;
+    display: flex;             /* Habilita Flexbox para alinear elementos */
+    flex-wrap: wrap;           /* Permite que los elementos salten de línea */
+    position: relative;        /* Para posicionar la fecha absoluta si se desea */
+}
+
+/* Contenedor principal para la navegación y el contenido del artículo */
+.main-content-wrapper {
+    display: flex;
+    width: 100%;
+    align-items: flex-start; /* Alinea la parte superior de las columnas */
+}
+
+/* Columna de Navegación (Izquierda) */
+.nav-links-column {
+    flex: 0 0 150px; /* Ancho fijo para la columna de navegación */
+    padding-right: 20px; /* Espacio entre las columnas */
+}
+
+/* Estilos de los enlaces de Navegación */
+.nav-links-column nav {
+    display: flex;
+    flex-direction: column; /* Apila los enlaces verticalmente */
+}
+
+.nav-links-column a {
+    color: #008cff; /* Color de enlace azul */
+    text-decoration: none;
+    font-size: 1.1em;
+    margin: 5px 0; /* Espacio entre los enlaces apilados */
+    line-height: 1.2;
+}
+
+/* Columna de Contenido del Artículo (Derecha) */
+.article-info-column {
+    flex-grow: 1; /* Ocupa el espacio restante */
+    padding-right: 120px; /* Para dejar espacio a la derecha para la fecha */
+}
+
+
